@@ -1,0 +1,19 @@
+{
+  "name": "demo-webpack",
+  "version": "1.0.0",
+  "description": "webpack sample project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snow0119/demo-webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snow0119/demo-webpack/issues"
+  },
+  "homepage": "https://github.com/snow0119/demo-webpack#readme"
+}
