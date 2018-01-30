@@ -35,3 +35,9 @@
 执行：
 
         npm start
+
+7、生成Source Maps（使调试更容易）
+在webpack.config.js 文件
+添加
+
+        devtool: "eval-source-map"
