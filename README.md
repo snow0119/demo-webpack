@@ -10,7 +10,7 @@
 > app 用来存放原始数据和JavaScript模块
 > public 用来存放供浏览器读取的文件
 
-4.创建三个文件
+4. 创建三个文件
 > index.html --放在public文件夹中;
 > Greeter.js --放在app文件夹中;
 > main.js --放在app文件夹中;
@@ -26,3 +26,12 @@
                 filename: "bundle.js"           // 打包后输出文件的文件名
             }
         }
+
+6. 更快捷的执行打包任务
+在package.json文件中的scripts对象中添加
+
+        "start": "webpack"
+
+执行：
+
+        npm start
