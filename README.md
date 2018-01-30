@@ -36,8 +36,31 @@
 
         npm start
 
-7、生成Source Maps（使调试更容易）
+7. 生成Source Maps（使调试更容易）
 在webpack.config.js 文件
 添加
 
         devtool: "eval-source-map"
+
+8. 使用webpack构建本地服务器
+
+        npm install --save-dev webpack-dev-server
+
+ 在webpack.config.js 文件
+ 添加
+
+    devServer: {
+        contentBase: "./public",    // 本地服务器所加载的页面所在的目录
+        historyApiFallback: true,   // 不跳转
+        inline: true                // 实时刷新
+    }
+
+在package.json中的scripts对象中添加如下命令，用以开启本地服务器：
+
+        "server": "webpack-dev-server --open"
+
+在终端中输入
+
+        npm run server
+
+即可在本地的8080端口查看结果

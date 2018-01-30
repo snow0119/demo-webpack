@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack"
+    "start": "webpack",
+    "server": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/snow0119/demo-webpack/issues"
   },
-  "homepage": "https://github.com/snow0119/demo-webpack#readme"
+  "homepage": "https://github.com/snow0119/demo-webpack#readme",
+  "devDependencies": {
+    "webpack-dev-server": "^2.11.1"
+  }
 }
