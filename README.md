@@ -64,3 +64,30 @@
         npm run server
 
 即可在本地的8080端口查看结果
+9. Babel
+a. Babel的安装，一次性安装这些依赖包
+
+        npm install --save-dev babel-core babel-loader babel-preset-env babel-preset-react
+
+b. Babel的配置
+
+        module: {
+                rules: [
+                    {
+                        test: /(\.jsx|\.js)$/,
+                        use: {
+                            loader: "babel-loader",
+                            options: {
+                                presets: [
+                                    "env", "react"
+                                ]
+                            }
+                        },
+                        exclude: /node_modules/
+                    }
+                ]
+            }
+
+10. React的安装
+
+    npm install --save react react-dom
