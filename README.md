@@ -90,4 +90,4 @@ b. Babel的配置
 
 10. React的安装
 
-    npm install --save react react-dom
+        npm install --save react react-dom
