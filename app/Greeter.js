@@ -5,8 +5,9 @@ import styles from './Greeter.css' // 导入样式
 
 class Greeter extends Component {
     render() {
+        // 使用css module添加类名的方式
         return (
-            <div className={styles.root}> // 使用css module添加类名的方式
+            <div className={styles.root}>
                 {config.greetText}
             </div>
         )
