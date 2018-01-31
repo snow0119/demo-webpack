@@ -25,8 +25,10 @@ module.exports = {
                 loader: "css-loader",
                 options: {
                     modules: true, // 指定启用css modules
-                    localIdentName:'[name]__[local]--[hash:base64:5]'
+                    localIdentName: '[name]__[local]--[hash:base64:5]'
                 }
+            }, {
+                loader: "postcss-loader"
             }]
         }]
     }

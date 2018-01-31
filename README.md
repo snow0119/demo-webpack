@@ -96,7 +96,7 @@ b. Babel的配置
 a. 安装
 webpack提供两个工具处理样式表，css-loader 和 style-loader，二者处理的任务不同，css-loader使你能够使用类似@import 和 url(...)的方法实现 require()的功能,style-loader将所有的计算后的样式加入页面中，二者组合在一起使你能够把样式表嵌入webpack打包后的JS文件中。
 
-        npm install --save style-loader css-loader
+        npm install --save-dev style-loader css-loader
 
 b. 使用
 
@@ -133,6 +133,14 @@ b. 使用
             modules: true, // 指定启用css modules
             localIdentName: '[name]__[local]--[hash:base64:5]' // 指定css的类名格式
         }
+
+13. CSS预处理器:可以把特殊类型的语句转化为浏览器可识别的CSS语句。
+存在一个CSS的处理平台-PostCSS，它可以帮助你的CSS实现更多的功能。
+举例来说如何使用PostCSS，我们使用PostCSS来为CSS代码自动添加适应不同浏览器的CSS前缀。
+
+首先安装postcss-loader 和 autoprefixer（自动添加前缀的插件）
+
+        npm install --save-dev postcss-loader autoprefixer
 
 
 [原文链接](https://www.jianshu.com/p/42e11515c10f)
