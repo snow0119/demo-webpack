@@ -11,7 +11,8 @@ module.exports = {
     devServer: {
         contentBase: "./public",        // 本地服务器所加载的页面所在的目录
         historyApiFallback: true,       // 不跳转
-        inline: true                    // 实时刷新
+        inline: true,                    // 实时刷新
+        hot: true
     },
     module: {
         rules: [{
@@ -39,6 +40,7 @@ module.exports = {
         new webpack.BannerPlugin('版权所有，翻版必究'),
         new HtmlWebpackPlugin({
             template: __dirname + '/app/index.tmpl.html' // new 一个该插件的实例，并传入相关参数
-        })
+        }),
+        new webpack.HotModuleRepalcementPlugin()  // 热加载插件
     ]
 }

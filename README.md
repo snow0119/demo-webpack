@@ -159,6 +159,39 @@ a. 安装
 
         npm install --save-dev html-webpack-plugin
 
+16. Hot Module Replacement(HMR）
+插件作用：它允许你在修改组件代码后，自动刷新实时预览修改后的效果。
 
+> 在webpack中实现HMR也很简单，只需要做两项配置:
+    a. 在webpack配置文件中添加HMR插件；
+    b. 在Webpack Dev Server中添加“hot”参数；
 
+不过配置完这些后，JS模块其实还是不能自动热加载的，还需要在你的JS模块中执行一个Webpack提供的API才能实现热加载，虽然这个API不难使用，但是如果是React模块，使用我们已经熟悉的Babel可以更方便的实现功能热加载。
+
+> 整理下我们的思路，具体实现方法如下：
+    a. Babel和webpack是独立的工具
+    b. 二者可以一起工作
+    c. 二者都可以通过插件拓展功能
+    d. HMR是一个webpack插件，它让你能浏览器中实时观察模块修改后的效果，但是如果你想让它工作，需要对模块进行额外的配额；
+    e. Babel有一个叫做react-transform-hrm的插件，可以在不对React模块进行额外的配置的前提下让HMR正常工作；
+
+安装react-transform-hmr
+
+        npm install --save-dev babel-plugin-react-transform react-transform-hmr
+
+配置Babel
+
+        "env": {
+            "development": {
+            "plugins": [["react-transform", {
+               "transforms": [{
+                 "transform": "react-transform-hmr",
+
+                 "imports": ["react"],
+
+                 "locals": ["module"]
+               }]
+             }]]
+            }
+        }
 [原文链接](https://www.jianshu.com/p/42e11515c10f)
