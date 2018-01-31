@@ -142,5 +142,15 @@ b. 使用
 
         npm install --save-dev postcss-loader autoprefixer
 
+14. 插件（Plugins）
+a. 插件（Plugins）是用来拓展Webpack功能的，它们会在整个构建过程中生效，执行相关的任务。
+
+> Loaders和Plugins区别：
+    loaders是在打包构建过程中用来处理源文件的（JSX，Scss，Less..），一次处理一个;
+    Plugins并不直接操作单个文件，它直接对整个构建过程起作用。
+
+b. 插件的使用方法
+ 要使用某个插件，我们需要通过npm安装它，然后要做的就是在webpack配置中的plugins关键字部分添加该插件的一个实例（plugins是一个数组）。
+
 
 [原文链接](https://www.jianshu.com/p/42e11515c10f)
