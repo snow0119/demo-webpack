@@ -91,3 +91,42 @@ b. Babel的配置
 10. React的安装
 
         npm install --save react react-dom
+
+11. CSS
+a. 安装
+webpack提供两个工具处理样式表，css-loader 和 style-loader，二者处理的任务不同，css-loader使你能够使用类似@import 和 url(...)的方法实现 require()的功能,style-loader将所有的计算后的样式加入页面中，二者组合在一起使你能够把样式表嵌入webpack打包后的JS文件中。
+
+        npm install --save style-loader css-loader
+
+b. 使用
+
+        module.exports = {
+
+           ...
+            module: {
+                rules: [
+                    {
+                        test: /(\.jsx|\.js)$/,
+                        use: {
+                            loader: "babel-loader"
+                        },
+                        exclude: /node_modules/
+                    },
+                    {
+                        test: /\.css$/,
+                        use: [
+                            {
+                                loader: "style-loader"
+                            }, {
+                                loader: "css-loader"
+                            }
+                        ]
+                    }
+                ]
+            }
+        };
+
+
+
+
+[原文链接](https://www.jianshu.com/p/42e11515c10f)

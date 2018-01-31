@@ -2,4 +2,4 @@ import React from 'react'
 import {render} from 'react-dom'
 import Greeter from './Greeter'
 
-render(<Greeter/>, document.getEleçmentById('root'))
+render(<Greeter/>, document.getElementById('root'))
