@@ -126,7 +126,13 @@ b. 使用
             }
         };
 
+12. CSS module
+在webpack.config.js中添加
 
+        options: {
+            modules: true, // 指定启用css modules
+            localIdentName: '[name]__[local]--[hash:base64:5]' // 指定css的类名格式
+        }
 
 
 [原文链接](https://www.jianshu.com/p/42e11515c10f)
