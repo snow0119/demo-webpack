@@ -1,10 +1,11 @@
 const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     devtool: "eval-source-map",
     entry: __dirname + "/app/main.js", // 唯一入口文件
     output: {
-        path: __dirname + "/public",    // 打包后文件存放路径
+        path: __dirname + "/build",    // 打包后文件存放路径
         filename: "bundle.js"           // 打包后输出文件的文件名
     },
     devServer: {
@@ -35,6 +36,9 @@ module.exports = {
         }]
     },
     plugins: [
-        new webpack.BannerPlugin('版权所有，翻版必究')
+        new webpack.BannerPlugin('版权所有，翻版必究'),
+        new HtmlWebpackPlugin({
+            template: __dirname + '/app/index.tmpl.html' // new 一个该插件的实例，并传入相关参数
+        })
     ]
 }

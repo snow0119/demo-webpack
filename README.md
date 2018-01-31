@@ -152,5 +152,13 @@ a. 插件（Plugins）是用来拓展Webpack功能的，它们会在整个构建
 b. 插件的使用方法
  要使用某个插件，我们需要通过npm安装它，然后要做的就是在webpack配置中的plugins关键字部分添加该插件的一个实例（plugins是一个数组）。
 
+15. HtmlWebpackPlugin
+插件的作用：依据一个简单的index.html模板，生成一个自动引用你打包后的js文件的新index.html。
+这在每次生成的js文件名称不同时非常有用（如添加了hash值）。
+a. 安装
+
+        npm install --save-dev html-webpack-plugin
+
+
 
 [原文链接](https://www.jianshu.com/p/42e11515c10f)
