@@ -67,6 +67,7 @@
         npm run server
 
 即可在本地的8080端口查看结果
+
 9. Babel
 
 a. Babel的安装，一次性安装这些依赖包
@@ -171,6 +172,7 @@ a. 安装
         npm install --save-dev html-webpack-plugin
 
 16. Hot Module Replacement(HMR）
+
 插件作用：它允许你在修改组件代码后，自动刷新实时预览修改后的效果。
 
 > 在webpack中实现HMR也很简单，只需要做两项配置:
