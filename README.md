@@ -16,6 +16,7 @@
 > main.js --放在src文件夹中;
 
 5. 通过配置文件来使用
+
 新建webpack.config.js 文件
 添加
 
@@ -28,6 +29,7 @@
         }
 
 6. 更快捷的执行打包任务
+
 在package.json文件中的scripts对象中添加
 
         "start": "webpack"
@@ -37,6 +39,7 @@
         npm start
 
 7. 生成Source Maps（使调试更容易）
+
 在webpack.config.js 文件
 添加
 
@@ -65,6 +68,7 @@
 
 即可在本地的8080端口查看结果
 9. Babel
+
 a. Babel的安装，一次性安装这些依赖包
 
         npm install --save-dev babel-core babel-loader babel-preset-env babel-preset-react
@@ -93,7 +97,9 @@ b. Babel的配置
         npm install --save react react-dom
 
 11. CSS
+
 a. 安装
+
 webpack提供两个工具处理样式表，css-loader 和 style-loader，二者处理的任务不同，css-loader使你能够使用类似@import 和 url(...)的方法实现 require()的功能,style-loader将所有的计算后的样式加入页面中，二者组合在一起使你能够把样式表嵌入webpack打包后的JS文件中。
 
         npm install --save-dev style-loader css-loader
@@ -127,6 +133,7 @@ b. 使用
         };
 
 12. CSS module
+
 在webpack.config.js中添加
 
         options: {
@@ -135,6 +142,7 @@ b. 使用
         }
 
 13. CSS预处理器:可以把特殊类型的语句转化为浏览器可识别的CSS语句。
+
 存在一个CSS的处理平台-PostCSS，它可以帮助你的CSS实现更多的功能。
 举例来说如何使用PostCSS，我们使用PostCSS来为CSS代码自动添加适应不同浏览器的CSS前缀。
 
@@ -143,6 +151,7 @@ b. 使用
         npm install --save-dev postcss-loader autoprefixer
 
 14. 插件（Plugins）
+
 a. 插件（Plugins）是用来拓展Webpack功能的，它们会在整个构建过程中生效，执行相关的任务。
 
 > Loaders和Plugins区别：
@@ -153,8 +162,10 @@ b. 插件的使用方法
  要使用某个插件，我们需要通过npm安装它，然后要做的就是在webpack配置中的plugins关键字部分添加该插件的一个实例（plugins是一个数组）。
 
 15. HtmlWebpackPlugin
+
 插件的作用：依据一个简单的index.html模板，生成一个自动引用你打包后的js文件的新index.html。
 这在每次生成的js文件名称不同时非常有用（如添加了hash值）。
+
 a. 安装
 
         npm install --save-dev html-webpack-plugin
